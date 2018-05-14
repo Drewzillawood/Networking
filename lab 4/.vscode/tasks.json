@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build ruptimeServer.c",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-std=gnu99",
+                "-o",
+                "runServer",
+                "ruptimeServer.c",
+                "-lm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build ruptimeClient.c",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-std=gnu99",
+                "-o",
+                "runClient",
+                "ruptimeClient.c",
+                "-lm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
